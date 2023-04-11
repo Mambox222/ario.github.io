@@ -1,0 +1,86 @@
+body{
+    background-color: #2e4f70;
+}
+
+header.titulo {
+	background-color: #b20303;
+	height: 50px;
+	background-image: url(img/titulo_1.png);
+    background-repeat: no-repeat;
+	background-position: center;
+	padding: 20px;
+	background-size: 80%;
+	display: flex;
+}
+
+.contenedor 
+  {
+	display: flex;
+  }
+  
+  main 
+  {
+	flex: 2;
+  }
+  
+  aside 
+  {
+	flex: 1;
+	
+  }
+  
+  /* Estilos para el artículo con la clase "evolucion" */
+article.evolucion {
+	position: relative; /* Posición relativa para los elementos internos */
+	width: 250px; /* Ancho del artículo */
+	transition: all .3s ease; /* Transición suave para los cambios */
+  }
+  
+  /* Estilos para la primera imagen dentro del artículo */
+  article img:first-child {
+	box-shadow: 0 60px 60px -60px blue; /* Sombra para la imagen */
+	border-radius: 4px; /* Bordes redondeados para la imagen */
+	object-fit: cover; /* Ajuste de la imagen al contenedor */
+	width: 100%; /* Ancho de la imagen */
+  }
+  
+  /* Estilos para la segunda imagen dentro del artículo */
+  article img:last-child {
+	position: absolute; /* Posición absoluta para la imagen */
+	width: 200px; /* Ancho de la imagen */
+	bottom: 0; /* Posición en la parte inferior del artículo */
+	left: 0; /* Posición a la izquierda del artículo */
+	right: 0; /* Posición a la derecha del artículo */
+	margin: auto; /* Margen automático para centrar la imagen */
+	transform: translate(25%); /* Desplazamiento horizontal de la imagen */
+	transition: .3s ease; /* Transición suave para los cambios */
+	opacity: 0; /* Opacidad inicial de la imagen */
+  }
+  
+  /* Estilos para el artículo al pasar el cursor sobre él */
+  article:hover {
+	transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0); /* Transformación 3D para el artículo */
+  }
+  
+  /* Estilos para el pseudo-elemento ::before del artículo */
+  article::before {
+	content: ''; /* Contenido vacío */
+	position: absolute; /* Posición absoluta para el pseudo-elemento */
+	bottom: 0; /* Posición en la parte inferior del artículo */
+	height: 100%; /* Altura del pseudo-elemento */
+	width: 100%; /* Ancho del pseudo-elemento */
+	background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,0.5) 50%, rgba(0,0,0) 95%); /* Gradiente de fondo para el pseudo-elemento */
+	opacity: 0; /* Opacidad inicial del pseudo-elemento */
+	transition: all .3s ease; /* Transición suave para los cambios */
+  }
+  
+  /* Estilos para el pseudo-elemento ::before del artículo al pasar el cursor sobre él */
+  article:hover::before {
+	opacity: 1; /* Opacidad del pseudo-elemento */
+  }
+  
+  /* Estilos para la segunda imagen dentro del artículo al pasar el cursor sobre él */
+  article:hover img:last-child {
+	opacity: 1; /* Opacidad de la imagen */
+	transform: translateY(10%); /* Desplazamiento vertical de la imagen */
+  }
