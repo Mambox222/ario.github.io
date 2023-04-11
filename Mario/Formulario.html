@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario interno</title>
+    <style>
+      /*https://www.universalpictures-latam.com/micro/super-mario-bros*/
+      body{
+  height: 100%; /* Establece la altura del cuerpo del documento en 100% */
+  font-family: 'Noto Sans', sans-serif; /* Establece la fuente del texto en 'Noto Sans' */
+  background-image: url(img/fondo.jpg); /* Establece la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-size: 1400px; /* Establece el tamaño de la imagen de fondo */
+}
+
+.contact_form{  
+  width: 460px; /* Establece el ancho del formulario de contacto */
+  height: auto; /* Establece la altura del formulario de contacto en automático */
+  margin: 80px auto; /* Establece el margen superior e inferior en 80px y el margen izquierdo y derecho en automático */
+  border-radius: 10px; /* Establece el radio de borde del formulario de contacto en 10px */
+  padding-top: 30px; /* Establece el relleno superior del formulario de contacto en 30px */
+  padding-bottom: 20px; /* Establece el relleno inferior del formulario de contacto en 20px */
+  background-color: #930000; /* Establece el color de fondo del formulario de contacto */
+  padding-left: 30px; /* Establece el relleno izquierdo del formulario de contacto en 30px */
+}
+
+input{
+  background-color: #f5f5f5b6; /* Establece el color de fondo de los campos de entrada */
+  width: 408px; /* Establece el ancho de los campos de entrada */
+  height: 40px; /* Establece la altura de los campos de entrada */
+  border-radius: 5px; /* Establece el radio de borde de los campos de entrada en 5px */
+  border-style: solid; /* Establece el estilo de borde de los campos de entrada en sólido */
+  border-width: 1px; /* Establece el ancho de borde de los campos de entrada en 1px */
+  border-color: #000000; /* Establece el color de borde de los campos de entrada */
+  margin-top: 10px; /* Establece el margen superior de los campos de entrada en 10px */
+  padding-left: 10px; /* Establece el relleno izquierdo de los campos de entrada en 10px */
+  margin-bottom: 20px; /* Establece el margen inferior de los campos de entrada en 20px */
+}
+
+textarea{
+  background-color: #fbfbfb; /* Establece el color de fondo del área de texto */
+  width: 405px; /* Establece el ancho del área de texto */
+  height: 150px; /* Establece la altura del área de texto */
+  border-radius: 5px; /* Establece el radio de borde del área de texto en 5px */
+  border-style: solid; /* Establece el estilo de borde del área de texto en sólido */
+  border-width: 1px; /* Establece el ancho de borde del área de texto en 1px */
+  border-color: #211f20; /* Establece el color de borde del área de texto */
+  margin-top: 10px; /* Establece el margen superior del área de texto en 10px */
+  padding-left: 10px; /* Establece el relleno izquierdo del área de texto en 10px */
+  margin-bottom: 20px; /* Establece el margen inferior del área de texto en 20px */
+  padding-top: 15px; /* Establece el relleno superior del área de texto en 15px */
+}
+
+label{
+  display: block; /* Establece el elemento de etiqueta como un bloque */
+  float: center; /* Centra el elemento de etiqueta */
+}
+
+button{
+  height: 45px; /* Establece la altura del botón de envío */
+  padding-left: 5px; /* Establece el relleno izquierdo del botón de envío en 5px */
+  padding-right: 5px; /* Establece el relleno derecho del botón de envío en 5px */
+  margin-bottom: 20px; /* Establece el margen inferior del botón de envío en 20px */
+  margin-top: 10px; /* Establece el margen superior del botón de envío en 10px */
+  text-transform: uppercase; /* Convierte el texto del botón en mayúsculas */
+  background-color: #c30606; /* Establece el color de fondo del botón */
+  border-color: #6b0404; /* Establece el color del borde del botón */
+  border-style: solid; /* Establece el estilo de borde del botón en sólido */
+  border-radius: 10px; /* Establece el radio de borde del botón en 10px */
+  width: 420px; /* Establece el ancho del botón */
+  cursor: pointer; /* Cambia el cursor del mouse al pasar sobre el botón */
+}
+
+button p{
+  color: #fff; /* Establece el color del texto del botón en blanco */
+}
+
+
+span#obligatorio{
+  color: #090909; /* Establece el color del texto del elemento span con ID "obligatorio" en negro (#090909) */
+}
+
+.aviso{
+  font-size: 13px; /* Establece el tamaño de fuente del elemento con clase "aviso" en 13px */
+  color: #0e0e0e; /* Establece el color del texto del elemento con clase "aviso" en negro (#0e0e0e) */
+}
+
+h1{
+  font-size: 39px; /* Establece el tamaño de fuente del elemento h1 en 39px */
+  text-align: letf; /* Establece la alineación del texto del elemento h1 a la izquierda */
+  padding-bottom: 20px; /* Establece el relleno inferior del elemento h1 en 20px */
+  color: #ffffff; /* Establece el color del texto del elemento h1 en blanco (#ffffff) */
+}
+
+h3{
+  font-size: 16px; /* Establece el tamaño de fuente del elemento h3 en 16px */
+  padding-bottom: 30px; /* Establece el relleno inferior del elemento h3 en 30px */
+  color: #0e0e0e; /* Establece el color del texto del elemento h3 en negro (#0e0e0e) */
+}
+
+p{
+  font-size: 14px; /* Establece el tamaño de fuente del elemento p en 14px */
+  color: #0e0e0e; /* Establece el color del texto del elemento p en negro (#0e0e0e) */
+}
+
+::-webkit-input-placeholder {
+ color: #a8a8a8; /* Establece el color del texto de marcador de posición para los campos de entrada en gris claro (#a8a8a8) */
+}
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8; /* Establece el color del texto de marcador de posición para el área de texto en gris claro (#a8a8a8) */
+}
+
+.formulario input:focus{
+  outline:0; /* Elimina el contorno predeterminado que aparece al hacer clic en el campo de entrada */
+  border: 1px solid #97d848; /* Establece el borde del campo de entrada en 1px sólido y de color verde (#97d848) al hacer clic en él */
+}
+
+.formulario textarea:focus{
+  outline:0; /* Elimina el contorno predeterminado que aparece al hacer clic en el área de texto */
+  border: 1px solid #97d848; /* Establece el borde del área de texto en 1px sólido y de color verde (#97d848) al hacer clic en él */
+}                     
+    </style>
+</head>
+<body>
+    <body>  
+  
+        <!-- formulario de contacto en html y css -->  
+      
+        <div class="contact_form">
+      
+          <div class="formulario">      
+            <h1>  Formulario de contacto</h1>
+              <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+      
+      
+                <form action="submeter-formulario.php" method="post">       
+      
+                  
+                      <p>
+                        
+                        <label for="nombre" class="colocar_nombre">  Nombre
+                          <span class="obligatorio">*</span>
+                        </label>
+                          <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                      </p>
+                    
+                      <p>
+                        <label for="email" class="colocar_email">Email
+                          <span class="obligatorio">*</span>
+                        </label>
+                          <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                      </p>
+                  
+                      <p>
+                        <label for="telefone" class="colocar_telefono">Teléfono
+                        </label>
+                          <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                      </p>        
+                                  
+                    
+                      <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+      
+                      <p class="aviso">
+                        <span id="obligatorio"> * </span>los campos son obligatorios.
+                      </p>          
+                      
+                </form>
+          </div>  
+        </div>
+      
+      </body>
+</body>
+</html>
